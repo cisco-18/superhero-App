@@ -11,5 +11,11 @@ This is an interactive superhero-themed web app built with **HTML** and **CSS**.
 
 ## 🛠️ Tech Stack
 
-- **HTML5**
-- **CSS3**
+- **HTML5** ✓
+- **CSS3** ✓
+
+# 📁 Project Structure
+
+```Plaintext
+   → Project struture coming soon ←
+```
