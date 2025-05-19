@@ -1,0 +1,341 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+body {
+  background: black;
+}
+
+
+#menu {
+  
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 60px;
+  display: flex; justify-content: center; align-items: center;
+  background: transparent;
+  z-index: 20;
+}
+#menu a {
+  margin: 0 10px; /* spacing each link */
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  transition: color 0.3s;
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+#menu a:hover {
+  color: #00bfff; 
+}
+
+
+.background-home-picture {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  z-index: 0;
+}
+
+/* home page styling */
+.container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  padding-top: 60px;
+  z-index: 10;
+}
+.hero-intro {
+  
+  color: white;
+  text-shadow: 2px 2px red;
+  font-family: 'Bangers', cursive;
+  flex: 2;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-cards {
+  font-family: 'Bangers', cursive;
+  font-size: 500;
+  color: yellow;
+  text-shadow: 2px 2px red;
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.hero-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  -webkit-user-select: none;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  color: #5077bd;
+  font-size: medium;
+}
+
+
+.hero-card.thor:hover ~ .background-home-picture {
+  background-image: url('images/thor.jpg');
+}
+.hero-card.hulk:hover ~ .background-home-picture {
+  background-image: url('images/hulk.jpg');
+}
+.hero-card.cap:hover ~ .background-home-picture {
+  background-image: url('images/captain america.jpg');
+}
+.hero-card.spidey:hover ~ .background-home-picture {
+  background-image: url('images/spiderman.jpg');
+}
+
+/* thor css bio */
+.bio-page-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bio-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bio-background video.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.bio {
+  font-family: 'Cinzel', serif;
+  color: #D4AF37;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  z-index: 2;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.hulk-background-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hulk-bio{
+  color: #ffffff;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  z-index: 2;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+
+.hulk-page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hulk-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.hulk-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hulk-bio-overlay {
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  top: 60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fa2d2d;
+  z-index: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+
+.cap-page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cap-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cap-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cap-bio-overlay {
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  top: 60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #3b9aff; 
+  z-index: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.spidey-page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.spidey-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.spidey-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spidey-bio-overlay {
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  top: 80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #e23434; 
+  z-index: 2;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+
+.aboutinfo {
+  color: yellow;
+  text-shadow: 2px 2px red;
+  font-family: 'Bangers', cursive;
+  font-size: large;
+  position: fixed;            
+  top: 50%;                   
+  left: 50%;                  
+  transform: translate(-50%, -50%);  
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  text-align: center;         
+  max-width: 90%;
+  padding: 1rem;
+}
+
+.about-background{
+  position: fixed;
+  height: fit-content;
+}
+
+.contact-content{
+  color: yellow;
+  text-shadow: 2px 2px red;
+  font-family: 'Bangers', cursive;
+  position: relative;
+  flex-direction: column;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-background{
+  position: fixed;
+  height: fit-content;
+}
+
