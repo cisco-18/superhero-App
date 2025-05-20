@@ -28,7 +28,7 @@ body {
 }
 #menu a {
   margin: 0 10px; /* spacing each link */
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", sans-serif;
   font-size: 24px;
   transition: color 0.3s;
   text-decoration: none;
